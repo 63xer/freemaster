@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-
+  <meta charset="UTF-8">
+  <title>LIFFLINE Front-end Framework</title>
+</head>
+<body>
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"
+  < script>
+     async function main() {
+       await liff.init({ liffId: "1653575653-0mBz0yAJ" })
+       await liff.shareTargetPicker([
+         {
+           type: "flex",
+           altText: "Flex Message from Share Target Picker",
+           contents:{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://img2.pic.in.th/pic/50c68501221bef862a.jpg",
+    "size": "full",
+    "aspectRatio": "9:10",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "label": "Line",
+      "uri": "https://linecorp.com/"
+    }
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "flex": 0,
+    "spacing": "sm",
+    "backgroundColor": "#EDC41DFF",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "รับเครดิตฟรี 50",
+          "uri": "https://lin.ee/Ji4gmHK"
+        },
+        "color": "#4BE2E9FF",
+        "height": "sm",
+        "style": "primary",
+        "position": "relative"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "สมัครสมาชิก",
+          "uri": "http://sunbf.meauto.cloud/sunbf/betflix"
+        },
+        "color": "#F12626FF",
+        "height": "sm",
+        "style": "primary"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "แชร์ต่อให้เพื่อน",
+          "uri": "https://liff.line.me/2006427075-1ye9Ygaj"
+        },
+        "color": "#F12626FF",
+        "style": "primary"
+      },
+      {
+        "type": "spacer",
+        "size": "sm"
+      }
+    ]
+  }
+}
+         }
+       ])
+       liff.closeWindow()
+     }
+     main()
+  </script>
+</body>
+</html>
